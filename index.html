@@ -10,6 +10,8 @@
   <link href="css/base.css" rel="stylesheet" type="text/css">
   <link href="css/page.css" rel="stylesheet" type="text/css">
   <script src="https://www.google.com/recaptcha/api.js?hl=pt-BR" async defer></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
   <title>Internet pela educação - Assine o manifesto</title>
 </head>
 <body>
@@ -24,22 +26,55 @@
       </h1>
 
       <div class="header__description">
-        <div class="header__description-text">
-          <p>
+        <div class="header__description-left">
+          <p class="header__description-text">
             Se você também acredita e apoia a liberação do acesso gratuito e ilimitado aos conteúdos educacionais,
             assine esse manifesto e junte-se a nós nessa luta!
           </p>
 
-          <button class="button button--primary sign-button">Assinar</button>
+          <button
+            id="signButton"
+            class="button button--primary sign-button show"
+            aria-haspopup="true">
+            Assinar
+          </button>
 
-          <p>Compartilhe esse movimento:</p>
-          <button>FB</button>
-          <button>Twtter</button>
-          <button>bla</button>
+          <div id="mask" class="mask" role="dialog"></div>
+          <div id="modal" class="modal" role="alert">
+            <button id="close" class="close" role="button">X</button>
+
+            <div class="modal__body">
+              <h2 class="section__title">Assine o manifesto</h2>
+              <form>
+                <div>
+                  <label for="name">Nome completo</label>
+                  <input type="text" name="name" id="name" required />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" />
+                </div>
+                <div>
+                  <label for="occupation">Profissão</label>
+                  <input type="text" name="occupation" id="occupation" />
+                </div>
+                <div class="g-recaptcha" data-sitekey="6LfoncMZAAAAAEmtJgzb-14Pkb81mBr9PlHheuYJ" data-callback></div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+
+          <div>
+            <p>Compartilhe esse movimento:</p>
+            <button>FB</button>
+            <button>Twtter</button>
+            <button>wpp</button>
+            <button>linkedin</button>
+          </div>
         </div>
         <div class="header__description-video">
           <iframe
-            width="560"
+            width="660"
             height="315"
             src="https://www.youtube.com/embed/rHax1Pg-iSM"
             frameborder="0"
@@ -51,33 +86,10 @@
     </div>
   </header>
 
-  <section>
-    O que defendemos
-  </section>
-
-  <section id="manifesto">
-    Formulário
-
-    <form>
-      <div>
-        <label for="name">Nome completo</label>
-        <input type="text" name="name" id="name" required />
-      </div>
-      <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required />
-      </div>
-      <div>
-        <label for="occupation">Profissão</label>
-        <input type="text" name="occupation" id="occupation" required />
-      </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LfoncMZAAAAAEmtJgzb-14Pkb81mBr9PlHheuYJ"
-        data-callback
-      ></div>
-      <button type="submit">Submit</button>
-    </form>
+  <section class="section section--secondary">
+    <div class="section__content">
+      <h2 class="section__title">O Manifesto</h2>
+    </div>
   </section>
 
   <script src="js/form.js"></script>
