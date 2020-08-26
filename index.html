@@ -27,22 +27,24 @@
   <section id="manifesto">
     Formulário
 
-    <form action="bla" method="POST">
+    <form>
       <div>
         <label for="name">Nome completo</label>
-        <input type="text" name="name" id="name" required />
+        <input type="text" name="name" id="name" />
       </div>
       <div>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" required />
+        <input type="email" name="email" id="email" />
       </div>
       <div>
         <label for="occupation">Profissão</label>
-        <input type="text" name="occupation" id="occupation" required />
+        <input type="text" name="occupation" id="occupation" />
       </div>
-      <div class="g-recaptcha" data-sitekey="6LfoncMZAAAAAEmtJgzb-14Pkb81mBr9PlHheuYJ"></div>
+      <div class="g-recaptcha" data-sitekey="6LfoncMZAAAAAEmtJgzb-14Pkb81mBr9PlHheuYJ" data-callback></div>
       <button type="submit">Submit</button>
     </form>
   </section>
+
+  <script src="js/form.js"></script>
 </body>
 </html>
