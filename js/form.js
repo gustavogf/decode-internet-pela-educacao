@@ -1,11 +1,3 @@
-document.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  if (grecaptcha.getResponse().length) {
-    create();
-  }
-});
-
 function recaptchaValidated() {
   document.getElementById('submitButton').classList.remove('button--disabled');
   document.getElementById('submitButton').removeAttribute('disabled');
@@ -39,6 +31,7 @@ function resetFormData() {
   document.querySelector('input[name="name"]').value = '';
   document.querySelector('input[name="email"]').value = '';
   document.querySelector('input[name="occupation"]').value = '';
+  grecaptcha.reset();
 }
 
 document.getElementById('close').addEventListener('click', function () {

@@ -210,3 +210,11 @@
 .manifest-section__item:nth-child(3):before {
   content: '3';
 }
+
+.thanks-message {
+  text-align: center;
+}
+
+.thanks-message__share-buttons {
+  margin: 16px auto 0;
+}

@@ -3,7 +3,10 @@ function queryApprovedTestimony() {
     .where("approved", "==", true)
     .get()
     .then(function (querySnapshot) {
+      let testimonials = '';
       querySnapshot.forEach(function (doc) {
+        testimonials += `<p>${doc.data().testimony}</p>`;
+        document.getElementById('testimonials').innerHTML = testimonials;
         console.log(doc.id, " => ", doc.data().name, "and", doc.data().testimony, "and", doc.data().email);
       });
     })
@@ -29,3 +32,5 @@ function createTestimony() {
       console.error("Error writing testimony: ", error);
     });
 }
+
+queryApprovedTestimony();
