@@ -1,9 +1,23 @@
+document.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  if (grecaptcha.getResponse().length) {
+    create();
+  }
+});
+
 function recaptchaValidated() {
   document.getElementById('submitButton').classList.remove('button--disabled');
   document.getElementById('submitButton').removeAttribute('disabled');
 }
 
-document.getElementById('signButton').addEventListener('click', function () {
+
+document.getElementById('signButton1').addEventListener('click', function () {
+  document.getElementById('mask').classList.add('active');
+  document.body.classList.add('body-with-modal');
+});
+
+document.getElementById('signButton2').addEventListener('click', function () {
   document.getElementById('mask').classList.add('active');
   document.body.classList.add('body-with-modal');
 });

@@ -34,6 +34,7 @@
   top: 30%;
   left: 50%;
   width: 500px;
+  max-width: 100%;
   margin-left: -200px;
   margin-top: -150px;
   background: #FFFFFF;
@@ -43,7 +44,6 @@
   transition: 0.2s ease-out;
   transform: translateY(45px);
 }
-
 
 .active {
   visibility: visible;
