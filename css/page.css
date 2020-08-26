@@ -153,3 +153,7 @@
     display: none;
   }
 }
+
+.social-link {
+  text-decoration: none;
+}
