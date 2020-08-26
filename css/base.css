@@ -24,3 +24,8 @@ body {
   font-size: 20px;
   font-weight: 700;
 }
+
+.button--disabled {
+  background-color: var(--color-blue-000);
+  cursor: not-allowed;
+}

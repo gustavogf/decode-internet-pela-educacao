@@ -9,6 +9,8 @@
   <link href="css/reset.css" rel="stylesheet" type="text/css">
   <link href="css/base.css" rel="stylesheet" type="text/css">
   <link href="css/page.css" rel="stylesheet" type="text/css">
+  <link href="css/modal.css" rel="stylesheet" type="text/css">
+  <link href="css/form.css" rel="stylesheet" type="text/css">
   <script src="https://www.google.com/recaptcha/api.js?hl=pt-BR" async defer></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
@@ -41,26 +43,61 @@
 
           <div id="mask" class="mask" role="dialog"></div>
           <div id="modal" class="modal" role="alert">
-            <button id="close" class="close" role="button">X</button>
-
             <div class="modal__body">
-              <h2 class="section__title">Assine o manifesto</h2>
-              <form>
-                <div>
-                  <label for="name">Nome completo</label>
-                  <input type="text" name="name" id="name" required />
-                </div>
-                <div>
-                  <label for="email">Email</label>
-                  <input type="email" name="email" id="email" />
-                </div>
-                <div>
-                  <label for="occupation">Profissão</label>
-                  <input type="text" name="occupation" id="occupation" />
-                </div>
-                <div class="g-recaptcha" data-sitekey="6LfoncMZAAAAAEmtJgzb-14Pkb81mBr9PlHheuYJ" data-callback></div>
-                <button type="submit">Submit</button>
-              </form>
+              <button id="close" class="close" role="button">X</button>
+
+              <div class="form" id="form">
+                <h2 class="section__title">Assine o manifesto</h2>
+
+                <form>
+                  <div class="material-form__container">
+                    <input class="material-form__input" type="text" placeholder=" " name="name" id="input-name" required>
+                    <label class="material-form__label" for="input-name">Nome completo</label>
+                    <div class="material-form__focus-animation"></div>
+                  </div>
+
+                  <div class="material-form__container">
+                    <input class="material-form__input" type="email" placeholder=" " name="email" id="input-email"
+                      required>
+                    <label class="material-form__label" for="input-email">Email</label>
+                    <div class="material-form__focus-animation"></div>
+                  </div>
+
+                  <div class="material-form__container">
+                    <input class="material-form__input" type="text" placeholder=" " name="occupation"
+                      id="input-occupation" required>
+                    <label class="material-form__label" for="input-occupation">Profissão</label>
+                    <div class="material-form__focus-animation"></div>
+                  </div>
+
+                  <div
+                    class="g-recaptcha"
+                    data-sitekey="6LfoncMZAAAAAEmtJgzb-14Pkb81mBr9PlHheuYJ"
+                    data-callback="recaptchaValidated"></div>
+
+                  <div class="form-button-wrapper">
+                    <button
+                      type="submit"
+                      class="button button--disabled"
+                      :disabled
+                      id="submitButton"
+                    >
+                      Assinar
+                  </button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="hidden" id="shareMessage">
+                <h2 class="section__title">Obrigado pelo seu apoio</h2>
+
+                <p>Compartilhe essa causa nas suas redes sociais e vamos juntos levar educação a mais pessoas</p>
+
+                <button>FB</button>
+                <button>Twtter</button>
+                <button>wpp</button>
+                <button>linkedin</button>
+              </div>
             </div>
           </div>
 
