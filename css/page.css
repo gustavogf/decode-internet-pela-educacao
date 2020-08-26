@@ -41,8 +41,8 @@
 .header__description-text {
   color: var(--color-cyam-800);
   line-height: 1.4;
-  font-weight: 500;
-  font-size: 26px;
+  font-weight: 400;
+  font-size: 24px;
   margin-bottom: 32px;
 }
 
@@ -154,6 +154,59 @@
   }
 }
 
+.signers-count__sign-button {
+  display: flex;
+  justify-content: center;
+}
+
+.share-text {
+  color: var(--color-cyam-800);
+}
+
 .social-link {
   text-decoration: none;
+  margin-right: 4px;
+}
+
+.signers-count {
+  color: var(--color-cyam-800);
+  font-weight: 500;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.manifest-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 75px;
+}
+
+.manifest-section__item {
+  flex-basis: 30%;
+  font-size: 18px;
+  line-height: 1.4;
+  position: relative;
+}
+
+.manifest-section__item:before {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: -65px;
+  font-size: 125px;
+  font-weight: 700;
+  opacity: 0.1;
+}
+
+.manifest-section__item:nth-child(1):before {
+  content: '1';
+}
+
+.manifest-section__item:nth-child(2):before {
+  content: '2';
+}
+
+.manifest-section__item:nth-child(3):before {
+  content: '3';
 }

@@ -23,6 +23,7 @@ function createSigner() {
 
 function displaySigners() {
   firestore.collection('signatures')
+    .orderBy('created_at')
     .get()
     .then(function(results) {
       let resultsCount = results.docs.length - 2;
@@ -38,7 +39,8 @@ function displaySigners() {
         }
       })
 
-      console.log(`${lastSigners[0]}, ${lastSigners[1]} e mais ${signersCount} pessoas já apoiaram`);
+      const text = `${lastSigners[0]}, ${lastSigners[1]} e mais ${signersCount} pessoas já assinaram.`;
+      document.getElementById('signersCount').innerHTML = text;
     })
 }
 
