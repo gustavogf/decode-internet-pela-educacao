@@ -29,79 +29,22 @@
 
       <div class="header__description">
         <div class="header__description-left">
-          <p class="header__description-text">
+          <p class="header__description-text header__description-text--mobile">
+            Um movimento pelo acesso ilimitado a conteúdos de educação
+          </p>
+          <p class="header__description-text header__description-text--desktop">
             Se você também acredita e apoia a liberação do acesso gratuito e ilimitado aos conteúdos educacionais,
             assine esse manifesto e junte-se a nós nessa luta!
           </p>
 
           <button
-            id="signButton"
-            class="button button--primary sign-button show"
+            id="signButton1"
+            class="button button--primary sign-button show sign-button--desktop"
             aria-haspopup="true">
             Assinar
           </button>
 
-          <div id="mask" class="mask" role="dialog"></div>
-          <div id="modal" class="modal" role="alert">
-            <div class="modal__body">
-              <button id="close" class="close" role="button">X</button>
-
-              <div class="form" id="form">
-                <h2 class="section__title">Assine o manifesto</h2>
-
-                <form>
-                  <div class="material-form__container">
-                    <input class="material-form__input" type="text" placeholder=" " name="name" id="input-name" required>
-                    <label class="material-form__label" for="input-name">Nome completo</label>
-                    <div class="material-form__focus-animation"></div>
-                  </div>
-
-                  <div class="material-form__container">
-                    <input class="material-form__input" type="email" placeholder=" " name="email" id="input-email"
-                      required>
-                    <label class="material-form__label" for="input-email">Email</label>
-                    <div class="material-form__focus-animation"></div>
-                  </div>
-
-                  <div class="material-form__container">
-                    <input class="material-form__input" type="text" placeholder=" " name="occupation"
-                      id="input-occupation" required>
-                    <label class="material-form__label" for="input-occupation">Profissão</label>
-                    <div class="material-form__focus-animation"></div>
-                  </div>
-
-                  <div
-                    class="g-recaptcha"
-                    data-sitekey="6LfoncMZAAAAAEmtJgzb-14Pkb81mBr9PlHheuYJ"
-                    data-callback="recaptchaValidated"></div>
-
-                  <div class="form-button-wrapper">
-                    <button
-                      type="submit"
-                      class="button button--disabled"
-                      :disabled
-                      id="submitButton"
-                    >
-                      Assinar
-                  </button>
-                  </div>
-                </form>
-              </div>
-
-              <div class="hidden" id="shareMessage">
-                <h2 class="section__title">Obrigado pelo seu apoio</h2>
-
-                <p>Compartilhe essa causa nas suas redes sociais e vamos juntos levar educação a mais pessoas</p>
-
-                <button>FB</button>
-                <button>Twtter</button>
-                <button>wpp</button>
-                <button>linkedin</button>
-              </div>
-            </div>
-          </div>
-
-          <div>
+          <div class="header__share-buttons">
             <p>Compartilhe esse movimento:</p>
             <button>FB</button>
             <button>Twtter</button>
@@ -111,14 +54,20 @@
         </div>
         <div class="header__description-video">
           <iframe
-            width="660"
-            height="315"
+            class="responsive-iframe"
             src="https://www.youtube.com/embed/rHax1Pg-iSM"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
           </iframe>
         </div>
+
+        <button
+          id="signButton2"
+          class="button button--primary sign-button sign-button--mobile show"
+          aria-haspopup="true">
+          Assinar
+        </button>
       </div>
     </div>
   </header>
@@ -128,6 +77,47 @@
       <h2 class="section__title">O Manifesto</h2>
     </div>
   </section>
+
+  <div id="mask" class="mask" role="dialog"></div>
+  <div id="modal" class="modal" role="alert">
+    <div class="modal__body">
+      <button id="close" class="close" role="button">X</button>
+      <div class="form" id="form">
+        <h2 class="section__title">Assine o manifesto</h2>
+        <form>
+          <div class="material-form__container">
+            <input class="material-form__input" type="text" placeholder=" " name="name" id="input-name" required>
+            <label class="material-form__label" for="input-name">Nome completo</label>
+            <div class="material-form__focus-animation"></div>
+          </div>
+          <div class="material-form__container">
+            <input class="material-form__input" type="email" placeholder=" " name="email" id="input-email" required>
+            <label class="material-form__label" for="input-email">Email</label>
+            <div class="material-form__focus-animation"></div>
+          </div>
+          <div class="material-form__container">
+            <input class="material-form__input" type="text" placeholder=" " name="occupation" id="input-occupation"
+              required>
+            <label class="material-form__label" for="input-occupation">Profissão</label>
+            <div class="material-form__focus-animation"></div>
+          </div>
+          <div class="g-recaptcha" data-sitekey="6LfoncMZAAAAAEmtJgzb-14Pkb81mBr9PlHheuYJ"
+            data-callback="recaptchaValidated"></div>
+          <div class="form-button-wrapper">
+            <button type="submit" class="button button--disabled" :disabled id="submitButton"> Assinar </button>
+          </div>
+        </form>
+      </div>
+      <div class="hidden" id="shareMessage">
+        <h2 class="section__title">Obrigado pelo seu apoio</h2>
+        <p>Compartilhe essa causa nas suas redes sociais e vamos juntos levar educação a mais pessoas</p>
+        <button>FB</button>
+        <button>Twtter</button>
+        <button>wpp</button>
+        <button>linkedin</button>
+      </div>
+    </div>
+  </div>
 
   <script src="js/form.js"></script>
 </body>
