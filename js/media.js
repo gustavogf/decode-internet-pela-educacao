@@ -33,7 +33,7 @@ function mountSupportSection(items) {
   let supportHTML = '';
 
   items.forEach(function(doc) {
-    const tag = `<a href="${doc.data().url}"><img src="${doc.data().image_url}" class="partners-image"></a>`;
+    const tag = `<a href="${doc.data().url}"><img src="${doc.data().image_url}" class="partners-image" alt="${doc.data().name}"></a>`;
     supportHTML += tag;
   });
 
