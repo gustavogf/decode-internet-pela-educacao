@@ -1,14 +1,18 @@
 function queryApprovedTestimony() {
   firestore.collection('testimony')
     .where("approved", "==", true)
+    .limit(4)
     .get()
     .then(function (querySnapshot) {
       let testimonials = '';
       querySnapshot.forEach(function (doc) {
-        testimonials += `<p>${doc.data().testimony}</p>`;
-        document.getElementById('testimonials').innerHTML = testimonials;
-        console.log(doc.id, " => ", doc.data().name, "and", doc.data().testimony, "and", doc.data().email);
+        testimonials += '<div class="testimonials__item">';
+        testimonials += `<p class="testimonials__text">"${doc.data().testimony}"</p>`;
+        testimonials += `<span class="testimonials__author">${doc.data().name}</span>`;
+        testimonials += '</div>';
       });
+
+      document.getElementById('testimonials').innerHTML = testimonials;
     })
 }
 
