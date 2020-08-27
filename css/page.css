@@ -198,6 +198,7 @@
 
 .manifest-section {
   margin-top: 75px;
+  margin-bottom: 32px;
 }
 
 @media(min-width: 1024px) {
@@ -219,7 +220,7 @@
 }
 
 @media(min-width: 1024px) {
-  .manifest-section__item {
+  .manifest-section__item:not(:last-child) {
     margin-bottom: 0;
   }
 }
@@ -260,6 +261,10 @@
 
 .thanks-message__share-buttons {
   margin: 16px auto 0;
+}
+
+.testimonials {
+  margin-bottom: 32px;
 }
 
 @media(min-width: 1024px) {
@@ -312,3 +317,32 @@
     width: 140px;
   }
 }
+
+.manifest-cta {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo {
+  margin-bottom: 32px;
+}
+
+@media(min-width: 1024px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .footer__logo {
+    margin-bottom: 0;
+  }
+}
+
+

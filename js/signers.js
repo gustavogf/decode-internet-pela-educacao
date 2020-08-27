@@ -2,7 +2,15 @@ function createSigner() {
   const name = document.querySelector('input[name="name"]').value;
   const email = document.querySelector('input[name="email"]').value;
   const occupation = document.querySelector('input[name="occupation"]').value;
-  const createdAt = new Date();
+  const options = {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+  };
+  const createdAt = new Date().toLocaleDateString('pt-br', options);
 
   firestore.collection("signatures").add({
       name: name,
@@ -11,9 +19,9 @@ function createSigner() {
       created_at: createdAt,
     })
     .then(function () {
-      console.log("Document successfully written!");
       document.getElementById('form').classList.add('hidden');
       document.getElementById('shareMessage').classList.remove('hidden');
+      displaySigners();
     })
     .catch(function (error) {
       console.error("Error writing document: ", error);
@@ -39,7 +47,7 @@ function displaySigners() {
         }
       })
 
-      const text = `${lastSigners[0]}, <br>${lastSigners[1]}<br> e mais ${signersCount} pessoas já assinaram.`;
+      const text = `${lastSigners[1]}, <br>${lastSigners[0]}<br> e mais ${signersCount} pessoas já assinaram.`;
       document.getElementById('signersCount').innerHTML = text;
     })
 }
