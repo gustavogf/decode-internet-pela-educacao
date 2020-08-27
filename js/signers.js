@@ -39,7 +39,7 @@ function displaySigners() {
         }
       })
 
-      const text = `${lastSigners[0]}, ${lastSigners[1]} e mais ${signersCount} pessoas já assinaram.`;
+      const text = `${lastSigners[0]}, <br>${lastSigners[1]}<br> e mais ${signersCount} pessoas já assinaram.`;
       document.getElementById('signersCount').innerHTML = text;
     })
 }

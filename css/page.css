@@ -165,7 +165,6 @@
 
 .signers-count {
   color: var(--color-cyam-800);
-  font-weight: 500;
   font-size: 24px;
   margin-bottom: 32px;
 }
@@ -175,8 +174,12 @@
   justify-content: space-between;
 }
 
-.signers-section__item {
-  flex-basis: 50%;
+.signers-section__item:first-child {
+  flex-basis: 40%;
+}
+
+.signers-section__item:last-child {
+  flex-basis: 60%
 }
 
 .manifest-section {
