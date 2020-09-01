@@ -27,6 +27,7 @@
 * [Utilizando o projeto](#utilizando-o-projeto)
   * [Pré requistos](#pré-requistos)
   * [Rodando localmente](#rodando-localmente)
+  * [Acessando as entradas no banco NoSQL](#acessando-as-entradas-no-banco-NoSQL)
 
 <!-- SOBRE O PROJETO -->
 ## Sobre o projeto
