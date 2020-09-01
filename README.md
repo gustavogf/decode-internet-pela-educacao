@@ -49,9 +49,9 @@
 
 ### Tecnologias utilizadas
 * HTML e CSS
-* Firebase - [Documentação](https://firebase.google.com/docs/)
 * JavaScript
-* Netlify
+* Firebase - [Documentação](https://firebase.google.com/docs/)
+* Netlify - [Documentação](https://docs.netlify.com/)
 
 <!-- Utilização -->
 ## Utilizando o projeto!
@@ -59,6 +59,9 @@
 <p> Aqui veremos como utilizar o projeto e subir localmente! </p>
 
 ### Pré requistos
+* Alguma IDE. Aqui utilizo o VSCode para rodar localmente.
+* Conta Google para o projeto firebase.
+* Conta Netlify para subir o projeto em rede.
 
 ### Rodando localmente
 
