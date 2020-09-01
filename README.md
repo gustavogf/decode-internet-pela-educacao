@@ -44,6 +44,7 @@
     <li> Contabilizar as pessoas que assinaram corretamente. </li>
     <li> Ter espaço para vídeos ou texto de depoimento de alunos dizendo como é difícil acompanhar os estudos sem internet. </li>
     <li> Ter o nome dos integrantes do squad. </li>
+    <li> Ser responsivo. </li>
   </ul>
 </p>
 
@@ -66,12 +67,13 @@
 ### Rodando localmente
 
 1. Crie um projeto no [Firebase](https://firebase.google.com/products/firestore?hl=pt)
-2. Clone o repositório:
+2. Crie um Storage (Desenvolver -> Cloud Firestore)
+3. Clone o repositório:
 ```sh
 git clone https://github.com/gustavogf/decode-internet-pela-educacao.git
 ```
-3. Caso utilize a IDE VsCode, baixe o plugin `Open in Default Browser`. Ele permite que o projeto possa ser visualizado localmente.
-4. Dentro do projeto Firebase, vá em configurações do projeto (no botão com formato de engrenagem) e copie e cole sua chave de API no arquivo `firebase.js`. Faça o mesmo com o ID do projeto.
+4. Caso utilize a IDE VsCode, baixe o plugin `Open in Default Browser`. Ele permite que o projeto possa ser visualizado localmente.
+5. Dentro do projeto Firebase, vá em configurações do projeto (no botão com formato de engrenagem) e copie e cole sua chave de API no arquivo `firebase.js`. Faça o mesmo com o ID do projeto.
 ```JS
 firebase.initializeApp({
   apiKey: 'API-KEY',
@@ -80,3 +82,26 @@ firebase.initializeApp({
 });
 ```
 5. Clique com o botão direito em `index.html` e selecione "Open in default Browser". Pronto, o projeto será aberto localmente em seu navegador!
+
+### Acessando as entradas no banco NoSQL
+<p>
+  Para acessar os dados salvos, como as assinaturas e imagens de patrocinadores, basta seguir o caminho (dentro do Firebase):
+  <ol>
+    <li> Desenvolver - > Cloud Firestore. </li>
+    <li> Acesse a coleção desejável. </li>
+    <li> Edite/visualize o documento e seus atributos.</li>
+  </ol>
+  Para adicionar patrocinadores:
+  <ol>
+    <li> Crie uma coleção chamada "assets", caso não exista </li>
+    <li> Crie um documento para cada patrocinador </li>
+    <li> Os atributos são: </li>
+    <ol type="a">
+      <li>"kind", que deve ser "image", "video" ou "partner" no caso dos parceiros </li>
+      <li>"name", nome do documento/parceiro </li>
+      <li>"image_url", url da logo do parceiro </li>
+      <li>"url", url do site do parceiro, para direcionamento </li>
+    </ol>
+  </ol>
+  O mesmo processo pode ser realizado para os depoimentos, na coleção Testimony. Que recebe o atributo "name" (nome do autor), "testimony" (depoimento) e "approved" que quando true, faz o depoimento aparecer no site.
+</p>
