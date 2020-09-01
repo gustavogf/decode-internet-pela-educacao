@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/gustavogf/decode-internet-pela-educacao">
-    <img src="media/Logo_Internet_pela_Educacao_icon_1.png" alt="Logo" width="200" height="130">
+    <img src="media/Logo_Internet_pela_Educacao_icon_1.png" alt="Logo" width=30% height=30%>
   </a>
 
   <h3 align="center">Internet Pela educação!</h3>
