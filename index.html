@@ -23,9 +23,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="css/reset.css" rel="stylesheet" type="text/css">
   <link href="css/base.css" rel="stylesheet" type="text/css">
+  <link href="css/button.css" rel="stylesheet" type="text/css">
   <link href="css/page.css" rel="stylesheet" type="text/css">
   <link href="css/modal.css" rel="stylesheet" type="text/css">
   <link href="css/form.css" rel="stylesheet" type="text/css">
+  <link href="css/card.css" rel="stylesheet" type="text/css">
+  <link href="css/spacer.css" rel="stylesheet" type="text/css">
   <script src="https://www.google.com/recaptcha/api.js?hl=pt-BR" async defer></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
@@ -67,7 +70,7 @@
               target="_blank"
               class="social-link"
             >
-              <img src="media/icons8-facebook-48.png" class="social-button" alt="Logo do Facebook" width="40">
+              <img src="media/icons8-facebook-48.svg" class="social-button" alt="Logo do Facebook" width="40">
             </a>
 
             <a
@@ -113,15 +116,52 @@
           aria-haspopup="true">
           Assinar
         </button>
+
+        <div class="">
+          <p class="share-text">Compartilhe esse movimento:</p>
+          <a
+            href="https://www.facebook.com/sharer/sharer.php?u=https://internetpelaeducacao.com.br"
+            title="Compartilhar no Facebook"
+            target="_blank"
+            class="social-link"
+          >
+            <img src="media/icons8-facebook-48.svg" class="social-button" alt="Logo do Facebook" width="40">
+          </a>
+
+          <a
+            href="https://twitter.com/intent/tweet?text=https://internetpelaeducacao.com.br"
+            title="Compartilhar no Twitter"
+            target="_blank"
+            class="social-link"
+          >
+            <img src="media/icons8-twitter-48.svg" class="social-button" alt="Logo do Twitter" width="40">
+          </a>
+          <a
+            href="https://api.whatsapp.com/send?l=pt_BR&text=Oi!%20Voc%C3%AA%20sabia%20que%2033,5%25%20das%20pessoas%20que%20fizeram%20ENEM%20nos%20%C3%BAltimos%205%20anos%20disseram%20n%C3%A3o%20possuir%20acesso%20%C3%A0%20internet?%20Ajude%20a%20gente%20a%20mudar%20isso!%0A%0Awww.internetpelaeducacao.com.br"
+            title="Compartilhar no Whatsapp"
+            target="_blank"
+            class="social-link"
+          >
+            <img src="media/icons8-whatsapp-48.svg" class="social-button" alt="Logo do Whatsapp" width="40">
+          </a>
+          <a
+            href="https://www.linkedin.com/shareArticle?mini=true&url=https://internetpelaeducacao.com.br"
+            title="Compartilhar no Linkedin"
+            target="_blank"
+            class="social-link"
+          >
+            <img src="media/icons8-linkedin-48.svg" class="social-button" alt="Logo do Linkedin" width="40">
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
   <section class="section section--secondary">
     <div class="section__content">
-      <h2 class="section__title">O que nós defendemos</h2>
+      <h2 class="section__title spacer-bottom-xxl">O que nós defendemos</h2>
 
-      <div class="manifest-section">
+      <div class="manifest-section spacer-bottom-l spacer-top-xxl">
         <p class="manifest-section__item">
           O acesso a conteúdos educacionais, em qualquer nível de ensino, isentos do desconto do volume de dados
           contratado e com velocidade de conexão que não imponha dificuldade de visualização e/ou download;
@@ -172,7 +212,7 @@
     <div class="section__content">
       <h2 class="section__title">Depoimentos</h2>
 
-      <div id="testimonials" class="testimonials"></div>
+      <div id="testimonials" class="testimonials spacer-bottom-l"></div>
 
       <div class="manifest-cta">
         <a href="https://docs.google.com/forms/d/1B0rfc3ZIi0wbMv8UWnnLwi1GyKkSUvu05YDHetmQUeA/viewform?edit_requested=true"
@@ -243,7 +283,7 @@
             target="_blank"
             class="social-link"
           >
-            <img src="media/icons8-facebook-48.png" class="social-button" alt="Logo do Facebook">
+            <img src="media/icons8-facebook-48.svg" class="social-button" alt="Logo do Facebook">
           </a>
 
           <a

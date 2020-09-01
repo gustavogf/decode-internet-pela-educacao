@@ -100,8 +100,8 @@
 }
 
 .section {
-  padding-bottom: 56px;
-  padding-top: 56px;
+  padding-bottom: 64px;
+  padding-top: 64px;
 }
 
 .section--primary {
@@ -196,11 +196,6 @@
   flex-basis: 60%
 }
 
-.manifest-section {
-  margin-top: 75px;
-  margin-bottom: 32px;
-}
-
 @media(min-width: 1024px) {
   .manifest-section {
     display: flex;
@@ -216,7 +211,7 @@
 }
 
 .manifest-section__item:not(:last-child) {
-  margin-bottom: 70px;
+  margin-bottom: 72px;
 }
 
 @media(min-width: 1024px) {
@@ -261,10 +256,6 @@
 
 .thanks-message__share-buttons {
   margin: 16px auto 0;
-}
-
-.testimonials {
-  margin-bottom: 32px;
 }
 
 @media(min-width: 1024px) {
