@@ -59,7 +59,6 @@ function displaySigners() {
           signersCount += 1;
         }
       })
-      console.log(lastSigners)
 
       const text = `${lastSigners[1]}, <br>${lastSigners[0]}<br> e mais ${signersCount} pessoas já assinaram.`;
       document.getElementById('signersCount').innerHTML = text;
