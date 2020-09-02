@@ -286,6 +286,39 @@
 
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+@media(min-width: 1024px) {
+  .footer {
+    flex-direction: row;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 24px;
+}
+
+@media(min-width: 1024px) {
+  .footer__logo {
+    margin-bottom: 0;
+  }
+}
+
+@media(max-width: 360px) {
+  .footer__credits {
+    display: none;
+  }
+}
+
+.footer__small-credits {
+  font-size: 11px;
+}
+
+@media(min-width: 359px) {
+  .footer__small-credits {
+    display: none;
+  }
 }
