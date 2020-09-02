@@ -34,16 +34,29 @@ function displaySigners() {
     .orderBy('created_at')
     .get()
     .then(function(results) {
-      let resultsCount = results.docs.length - 2;
-      let signersCount = -2;
+      let signersCount = 0;
       let lastSigners = [];
+      let parsedNames = [];
+      let parsedEmails = [];
 
       results.docs.forEach(function (data, index) {
-        signersCount += 1;
+        let currentEmail = data.data().email
+        let currentName = data.data().name
 
-        if (index === resultsCount) {
-          lastSigners.push(data.data().name);
-          resultsCount += 1;
+        if (parsedEmails.indexOf(currentEmail) === -1) {
+          parsedNames.push(currentName)
+          parsedEmails.push(currentEmail)
+        }
+      })
+
+      let lastSignersIndex = parsedNames.length - 2;
+
+      parsedNames.forEach(function (data, index) {
+        if (index === lastSignersIndex) {
+          lastSigners.push(data);
+          lastSignersIndex += 1;
+        } else {
+          signersCount += 1;
         }
       })
 
