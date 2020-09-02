@@ -50,7 +50,6 @@ function displaySigners() {
       })
 
       let lastSignersIndex = parsedNames.length - 2;
-      console.log(parsedNames)
 
       parsedNames.forEach(function (data, index) {
         if (index === lastSignersIndex) {
