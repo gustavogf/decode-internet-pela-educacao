@@ -307,7 +307,7 @@
   }
 }
 
-@media(max-width: 360px) {
+@media(max-width: 359px) {
   .footer__credits {
     display: none;
   }
@@ -317,7 +317,7 @@
   font-size: 11px;
 }
 
-@media(min-width: 359px) {
+@media(min-width: 360px) {
   .footer__small-credits {
     display: none;
   }
