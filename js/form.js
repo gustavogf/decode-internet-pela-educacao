@@ -14,11 +14,6 @@ document.getElementById('signButton2').addEventListener('click', function () {
   document.body.classList.add('body-with-modal');
 });
 
-document.getElementById('signButton3').addEventListener('click', function () {
-  document.getElementById('mask').classList.add('active');
-  document.body.classList.add('body-with-modal');
-});
-
 function closeModal() {
  document.getElementById('mask').classList.remove("active");
  document.body.classList.remove('body-with-modal');
