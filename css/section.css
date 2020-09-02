@@ -1,0 +1,40 @@
+.section {
+  padding-bottom: 64px;
+  padding-top: 64px;
+}
+
+@media(min-width: 1024px) {
+  .section {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+}
+
+.section--primary {
+  background-color: var(--color-blue-000);
+}
+
+.section--secondary {
+  background-color: var(--color-cyam-800);
+  color: #FFFFFF;
+}
+
+.section--small {
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+
+.section__content {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.section__title {
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 40px;
+  color: inherit;
+}

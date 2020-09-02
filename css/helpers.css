@@ -1,7 +1,11 @@
-.hidden-mobile {
-
+@media(max-width: 1024px) {
+  .hidden-mobile {
+    display: none;  
+  }
 }
 
-.hidden-desk {
-
+@media(min-width: 1024px) {
+  .hidden-desk {
+    display: none;
+  }
 }
