@@ -25,11 +25,12 @@
 * [Sobre o projeto](#sobre-o-projeto)
   * [Tecnolgias Utilizadas](#tecnologias-utilizadas)
 * [Utilizando o projeto](#utilizando-o-projeto)
-  * [Pré requistos](#pré-requistos)
+  * [Pré requisitos](#pré-requisitos)
   * [Rodando localmente](#rodando-localmente)
   * [Acessando as entradas no banco NoSQL](#acessando-as-entradas-no-banco-NoSQL)
-
+  * [Processo de deploy](#processo-de-deploy)
 <!-- SOBRE O PROJETO -->
+
 ## Sobre o projeto
 <p>
   O desafio da hackday foi: <br>
@@ -60,7 +61,7 @@
 
 <p> Aqui veremos como utilizar o projeto e subir localmente! </p>
 
-### Pré requistos
+### Pré requisitos
 * Alguma IDE. Aqui utilizo o VSCode para rodar localmente.
 * Conta Google para o projeto firebase.
 * Conta Netlify para subir o projeto em rede.
@@ -106,3 +107,7 @@ firebase.initializeApp({
   </ol>
   O mesmo processo pode ser realizado para os depoimentos, na coleção Testimony. Que recebe o atributo "name" (nome do autor), "testimony" (depoimento) e "approved" que quando true, faz o depoimento aparecer no site.
 </p>
+
+### Processo de deploy
+
+<p>O deploy da aplicação ocorre automáticamente após algum commit na branch master acontecer, após essa ação ocorrer um webhook triga o processo de deploy no netlify</p>
