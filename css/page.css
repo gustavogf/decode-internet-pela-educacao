@@ -127,6 +127,7 @@
   font-size: 24px;
   margin-bottom: 32px;
   line-height: 1.4;
+  text-align: center;
 }
 
 @media(min-width: 1024px) {
@@ -137,13 +138,13 @@
 }
 
 .signers-section__sign-button {
-  margin: 0 auto 48px;
+  margin: 0 auto 64px;
   display: block;
 }
 
 @media(min-width: 1024px) {
   .signers-section__sign-button {
-    margin: 0;
+    margin: 0 auto;
   }
 }
 
@@ -153,6 +154,12 @@
 
 .signers-section__item:last-child {
   flex-basis: 60%
+}
+
+@media(min-width: 1024px) {
+  .signers-section__item:first-child {
+    margin-right: 32px;
+  }
 }
 
 @media(min-width: 1024px) {
@@ -170,7 +177,7 @@
 }
 
 .manifest-section__item:not(:last-child) {
-  margin-bottom: 72px;
+  margin-bottom: 80px;
 }
 
 @media(min-width: 1024px) {
@@ -179,10 +186,16 @@
   }
 }
 
+@media(min-width: 1024px) {
+  .manifest-section__item {
+    padding-left: 40px;
+  }
+}
+
 .manifest-section__item:before {
   content: '';
   position: absolute;
-  left: -10px;
+  left: -5px;
   top: -75px;
   font-size: 70px;
   font-weight: 700;
@@ -191,7 +204,7 @@
 
 @media(min-width: 1024px) {
   .manifest-section__item:before {
-    left: -50px;
+    left: -15px;
     top: -65px;
     font-size: 125px;
   }
@@ -264,6 +277,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .partners-image {
