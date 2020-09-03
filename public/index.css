@@ -398,7 +398,6 @@ body {
   opacity: 1;
 }
 
-
 .active+.modal {
   visibility: visible;
   opacity: 1;
