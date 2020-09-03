@@ -22,8 +22,14 @@
 .material-form__container {
   position: relative;
   width: 100%;
-  margin: 30px auto;
+  margin: 16px auto;
   padding: 10px 0;
+}
+
+@media(min-width: 1024px) {
+  .material-form__container {
+    margin: 30px auto;
+  }
 }
 
 .material-form__container:nth-child(1) {
