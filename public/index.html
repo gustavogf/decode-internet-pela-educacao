@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description"
+    content="Se você também acredita e apoia a liberação do acesso gratuito e ilimitado aos conteúdos educacionais, assine esse manifesto e junte-se a nós nessa luta!">
+  <meta property="og:title"
+    content="Internet pela Educação - Um movimento pelo acesso ilimitado a conteúdos de educação" />
+  <meta name="twitter:title"
+    content="Internet pela Educação - Um movimento pelo acesso ilimitado a conteúdos de educação" />
+  <meta property="og:image"
+    content="https://d335luupugsy2.cloudfront.net/images%2Flanding_page%2F1609131%2Fthumb.png" />
+  <meta name="twitter:image"
+    content="https://d335luupugsy2.cloudfront.net/images%2Flanding_page%2F1609131%2Fthumb.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:description"
+    content="Se você também acredita e apoia a liberação do acesso gratuito e ilimitado aos conteúdos educacionais, assine esse manifesto e junte-se a nós nessa luta!" />
+  <meta name="twitter:description"
+    content="Se você também acredita e apoia a liberação do acesso gratuito e ilimitado aos conteúdos educacionais, assine esse manifesto e junte-se a nós nessa luta!" />
+  <link rel="apple-touch-icon" sizes="180x180" href="media/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicons/favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="media/favicons/safari-pinned-tab.svg" color="#002b50">
+  <meta name="msapplication-TileColor" content="#406ffc">
+  <meta name="theme-color" content="#406ffc">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="index.css" rel="stylesheet" type="text/css">
+  <script src="https://www.google.com/recaptcha/api.js?hl=pt-BR" async defer></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+  <title>Internet pela educação - Assine o manifesto</title>
+</head>
+<body>
+  <header class="section section--primary">
+    <div class="section__content">
+      <h1>
+        <img
+          src="media/Logo_Internet_pela_Educacao_oficial.png"
+          alt="Internet pela Educação"
+          class="header__logo"
+        >
+      </h1>
+
+      <div class="header__description">
+        <div class="header__description-left">
+          <p class="header__description-text header__description-text--mobile">
+            Um movimento pelo acesso ilimitado a conteúdos de educação
+          </p>
+          <p class="header__description-text header__description-text--desktop">
+            Se você também acredita e apoia a liberação do acesso gratuito e ilimitado aos conteúdos educacionais,
+            assine esse manifesto e junte-se a nós nessa luta!
+          </p>
+
+          <div class="header__video hidden-desk">
+            <iframe
+              class="responsive-iframe"
+              src="https://www.youtube.com/embed/rHax1Pg-iSM"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <button
+            id="signButton1"
+            class="button button--primary sign-button show"
+            aria-haspopup="true">
+            Assinar
+          </button>
+
+          <div class="header__share-buttons">
+            <p class="share-text">Compartilhe esse movimento:</p>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://internetpelaeducacao.com.br"
+              title="Compartilhar no Facebook"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="media/icons8-facebook-48.svg" class="social-button" alt="Logo do Facebook" width="40">
+            </a>
+
+            <a
+              href="https://twitter.com/intent/tweet?text=https://internetpelaeducacao.com.br"
+              title="Compartilhar no Twitter"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="media/icons8-twitter-48.svg" class="social-button" alt="Logo do Twitter" width="40">
+            </a>
+            <a
+              href="https://api.whatsapp.com/send?l=pt_BR&text=Oi!%20Voc%C3%AA%20sabia%20que%2033,5%25%20das%20pessoas%20que%20fizeram%20ENEM%20nos%20%C3%BAltimos%205%20anos%20disseram%20n%C3%A3o%20possuir%20acesso%20%C3%A0%20internet?%20Ajude%20a%20gente%20a%20mudar%20isso!%0A%0Awww.internetpelaeducacao.com.br"
+              title="Compartilhar no Whatsapp"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="media/icons8-whatsapp-48.svg" class="social-button" alt="Logo do Whatsapp" width="40">
+            </a>
+            <a
+              href="https://www.linkedin.com/shareArticle?mini=true&url=https://internetpelaeducacao.com.br"
+              title="Compartilhar no Linkedin"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="media/icons8-linkedin-48.svg" class="social-button" alt="Logo do Linkedin" width="40">
+            </a>
+          </div>
+        </div>
+
+        <div class="header__description-right hidden-mobile">
+          <div class="header__video">
+            <iframe
+              class="responsive-iframe"
+              src="https://www.youtube.com/embed/rHax1Pg-iSM"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--secondary">
+    <div class="section__content">
+      <h2 class="section__title spacer-bottom-xxl">O que nós defendemos</h2>
+
+      <div class="manifest-section spacer-bottom-l spacer-top-xxl">
+        <p class="manifest-section__item">
+          O acesso a conteúdos educacionais, em qualquer nível de ensino, isentos do desconto do volume de dados
+          contratado e com velocidade de conexão que não imponha dificuldade de visualização e/ou download;
+        </p>
+        <p class="manifest-section__item">
+          A criação de um instrumento para identificar videoaulas, transmissões de aulas remotas por softwares de
+          videoconferência, ambientes virtuais de aprendizado e documentários, a fim de dar amplo acesso a todo e
+          qualquer conteúdo que possa ter fins didáticos;
+        </p>
+        <p class="manifest-section__item">
+          O reconhecimento pelo governo e empresas de telecomunicações que a internet é também uma ferramenta pedagógica
+          essencial ao processo de ensino e aprendizado desde a educação infantil até o ensino superior, hoje e cada vez
+          mais no futuro.
+        </p>
+      </div>
+
+      <div class="manifest-cta">
+        <a href="https://rdstation-static.s3.amazonaws.com/cms%2Ffiles%2F48377%2F1597353537Manifesto_Internet_pela_educacao.pdf"
+          target="_blank" class="button">Ver o manifesto</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__content">
+      <div class="signers-section">
+        <div class="signers-section__item">
+          <div class="section__title">
+            Quem já assinou
+          </div>
+          <div class="signers-count" id="signersCount"></div>
+          <button
+            id="signButton2"
+            class="button button--primary sign-button show signers-section__sign-button"
+            aria-haspopup="true">
+            Assinar o manifesto
+          </button>
+        </div>
+
+        <div class="signers-section__item">
+          <h2 class="section__title">Apoio</h2>
+
+          <div id="partners" class="partners">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--primary">
+    <div class="section__content">
+      <h2 class="section__title">Depoimentos</h2>
+
+      <div id="testimonials" class="testimonials spacer-bottom-l"></div>
+
+      <div class="manifest-cta">
+        <a href="https://docs.google.com/forms/d/1B0rfc3ZIi0wbMv8UWnnLwi1GyKkSUvu05YDHetmQUeA/viewform?edit_requested=true"
+         target="_blank" class="button">Enviar meu depoimento</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section section--secondary section--small">
+    <div class="section__content footer">
+      <img
+        src="https://d335luupugsy2.cloudfront.net/cms/files/48377/1585745274/$bsfzjdyehpt"
+        width="200"
+        class="footer__logo"
+        alt="Quero Educação"
+      />
+
+      <div class="footer__small-credits">Feito com ♡ por André, Augusto, Gustavo, Jan e Pedro</div>
+
+      <div class="footer__credits">
+        <svg width="365px" height="40px" viewBox="0 0 365 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title>Feito com amor por André, Augusto, Gustavo, Jan e Pedro</title>
+          <g id="all" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="content">
+              <text id="text-1" font-family="RedHatText-Regular, Red Hat Text" font-size="13" font-weight="400" line-spacing="20" fill="#FFFFFF">
+                <tspan x="13.2765" y="24">Feito com</tspan>
+              </text>
+              <text id="text-2" font-family="RedHatText-Regular, Red Hat Text" font-size="13" font-weight="400" line-spacing="20" fill="#FFFFFF">
+                <tspan x="99.0725" y="24">por</tspan>
+                <tspan x="123" y="24" font-family="RedHatText-Medium, Red Hat Text" font-weight="500">André, Augusto, Gustavo, Jan e Pedro</tspan>
+              </text>
+              <line id="underline" x1="123" y1="30.5" x2="355" y2="30.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="square" opacity="0"></line>
+              <g id="heart-area" transform="translate(85, 20)">
+                <g id="heart-position">
+                  <path id="heart" d="M14.2958428,2 C12.3952724,2 10.7408308,3.162878 10.0008145,4.84629823 C9.26079826,3.1645464 7.60635662,2 5.70578622,2 C3.11083934,2 1,4.16225235 1,6.81835245 C1,12.8079249 9.44172735,17.7397289 9.80195553,17.9466111 C9.86389522,17.9816475 9.93072488,18 9.99918453,18 C10.0676442,18 10.1361038,17.9816475 10.1964135,17.9466111 C10.5550117,17.7397289 19,12.8079249 19,6.81835245 C19.001629,4.16225235 16.8907897,2 14.2958428,2 Z" stroke="#FFFFFF" stroke-width="1.5" fill-opacity="0" fill="#DA1E28" fill-rule="nonzero" stroke-linejoin="round" transform="translate(-10, -10)"></path>
+                </g>
+              </g>
+              <rect id="area" fill="#000000" x="0" y="0" width="240" height="40" opacity="0"></rect>
+            </g>
+          </g>
+          <animate xlink:href="#underline" attributeName="opacity" to="1" begin="all.mouseover" dur="80ms" repeatCount="1" fill="freeze" />
+          <animate xlink:href="#underline" attributeName="opacity" to="0" begin="all.mouseout" dur="80ms" repeatCount="1" fill="freeze" />
+          <animate xlink:href="#heart" attributeName="stroke" to="#DA1E28" begin="all.mouseover" dur="80ms" repeatCount="1" fill="freeze" />
+          <animate xlink:href="#heart" attributeName="stroke" to="#FFFFFF" begin="all.mouseout" dur="80ms" repeatCount="1" fill="freeze" />
+          <animate xlink:href="#heart" attributeName="fill-opacity" to="1" begin="all.mouseover" dur="80ms" repeatCount="1" fill="freeze" id="heart-start" />
+          <animate xlink:href="#heart" attributeName="fill-opacity" to="0" begin="all.mouseout" dur="80ms" repeatCount="1" fill="freeze" id="heart-end" />
+          <animateTransform xlink:href="#heart-position" attributeName="transform" type="scale" values="0.6; 1.1; 0.8; 1.1; 1.1; 0.6;" begin="all.mouseover" dur="1s" repeatCount="indefinite" />
+          <animateTransform xlink:href="#heart-position" attributeName="transform" type="scale" values="1" begin="all.mouseout" dur="1s" repeatCount="1" fill="freeze" />
+        </svg>
+      </div>
+    </div>
+  </footer>
+
+  <div id="mask" class="mask" role="dialog"></div>
+  <div id="modal" class="modal" role="alert">
+    <div class="modal__body">
+      <button id="close" class="close" role="button">X</button>
+      <div class="form" id="form">
+        <h2 class="section__title">Assine o manifesto</h2>
+        <form>
+          <div class="material-form__container">
+            <input class="material-form__input" type="text" placeholder=" " name="name" id="input-name" required>
+            <label class="material-form__label" for="input-name">Nome completo</label>
+            <div class="material-form__focus-animation"></div>
+          </div>
+          <div class="material-form__container">
+            <input class="material-form__input" type="email" placeholder=" " name="email" id="input-email" required>
+            <label class="material-form__label" for="input-email">Email</label>
+            <div class="material-form__focus-animation"></div>
+          </div>
+          <div class="material-form__container">
+            <input class="material-form__input" type="text" placeholder=" " name="occupation" id="input-occupation"
+              required>
+            <label class="material-form__label" for="input-occupation">Profissão</label>
+            <div class="material-form__focus-animation"></div>
+          </div>
+          <div class="g-recaptcha" data-sitekey="6LfoncMZAAAAAEmtJgzb-14Pkb81mBr9PlHheuYJ"
+            data-callback="recaptchaValidated"></div>
+          <div class="form-button-wrapper">
+            <button type="submit" class="button button--disabled" :disabled id="submitButton"> Assinar </button>
+          </div>
+        </form>
+      </div>
+      <div class="thanks-message hidden" id="shareMessage">
+        <h2 class="section__title">Obrigado pelo seu apoio</h2>
+        <p>Compartilhe essa causa nas suas redes sociais e vamos juntos levar educação a mais pessoas</p>
+
+        <div class="thanks-message__share-buttons">
+          <a
+            href="https://www.facebook.com/sharer/sharer.php?u=https://internetpelaeducacao.com.br"
+            title="Compartilhar no Facebook"
+            target="_blank"
+            class="social-link"
+          >
+            <img src="media/icons8-facebook-48.svg" class="social-button" alt="Logo do Facebook">
+          </a>
+
+          <a
+            href="https://twitter.com/intent/tweet?text=https://internetpelaeducacao.com.br"
+            title="Compartilhar no Twitter"
+            target="_blank"
+            class="social-link"
+          >
+            <img src="media/icons8-twitter-48.svg" class="social-button" alt="Logo do Twitter">
+          </a>
+          <a
+            href="https://api.whatsapp.com/send?l=pt_BR&text=Oi!%20Voc%C3%AA%20sabia%20que%2033,5%25%20das%20pessoas%20que%20fizeram%20ENEM%20nos%20%C3%BAltimos%205%20anos%20disseram%20n%C3%A3o%20possuir%20acesso%20%C3%A0%20internet?%20Ajude%20a%20gente%20a%20mudar%20isso!%0A%0Awww.internetpelaeducacao.com.br"
+            title="Compartilhar no Twitter"
+            target="_blank"
+            class="social-link"
+          >
+            <img src="media/icons8-whatsapp-48.svg" class="social-button" alt="Logo do Whatsapp">
+          </a>
+          <a
+            href="https://www.linkedin.com/shareArticle?mini=true&url=https://internetpelaeducacao.com.br"
+            title="Compartilhar no Twitter"
+            target="_blank"
+            class="social-link"
+          >
+            <img src="media/icons8-linkedin-48.svg" class="social-button" alt="Logo do Linkedin">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
