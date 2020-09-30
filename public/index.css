@@ -692,15 +692,31 @@ body {
 }
 
 .partners-image {
-  width: 90px;
+  width: 110px;
   height: auto;
   margin-right: 24px;
   margin-bottom: 24px;
 }
 
+.partners-image--small {
+  width: 70px;
+}
+
+.partners-image--extra-small {
+  width: 50px;
+}
+
 @media(min-width: 1024px) {
   .partners-image {
-    width: 140px;
+    width: 150px;
+  }
+
+  .partners-image--small {
+    width: 90px;
+  }
+
+  .partners-image--extra-small {
+    width: 70px;
   }
 }
 
